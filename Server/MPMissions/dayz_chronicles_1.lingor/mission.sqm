@@ -1,0 +1,220 @@
+version=11;
+class Mission {
+	addOns[] = {
+		"dayz_code",
+		"ibr_lingor"
+	};
+	addOnsAuto[] = {
+		"dayz_code",
+		"ibr_lingor"
+	};
+	randomSeed=11171215;
+	class Intel {
+		briefingName=$STR_MISSION_BRIEFING_NAME;
+		briefingDescription=$STR_MISSION_BRIEFING_DESC;
+		startWeather=0.067362607;
+		forecastWeather=0.52341133;
+		year=2011;
+		month=11;
+		day=11;
+		hour=11;
+		minute=11;
+	};
+	
+	class Groups {
+		items=2;
+		class Item0 {
+			side="WEST";
+			class Vehicles {
+				items=2;
+				class Item0 {
+					position[]={0.0, 0.0, 0.0};
+					azimut=0.0;
+					id=0;
+					side="WEST";
+					vehicle="USMC_Soldier_SL";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="Survivor";
+					init="this enableSimulation false;this allowDammage false;this disableAI 'FSM';this disableAI 'ANIM';this disableAI 'MOVE';";
+					leader=1;
+				};
+				class Item1 {
+					position[]={0.0, 0.0, 0.0};
+					azimut=0.0;
+					id=1;
+					side="WEST";
+					vehicle="USMC_Soldier_SL";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="Survivor";
+					init="this enableSimulation false;this allowDammage false;this disableAI 'FSM';this disableAI 'ANIM';this disableAI 'MOVE';";
+				};
+			};
+		};
+		class Item1 {
+			side="LOGIC";
+			class Vehicles {
+				items=1;
+				class Item0 {
+					position[]={0.0, 0.0, 0.0};
+					id=100;
+					side="LOGIC";
+					vehicle="FunctionsManager";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+	};
+	
+	class Markers {
+		items=13;
+		class Item0 {
+			position[]={4078.8516,30.836605,4757.7241};
+			name="center";
+			type="Empty";
+		};
+		class Item1 {
+			position[]={4989.1367,1.1281254,-4178.9229};
+			name="respawn_west";
+			type="Empty";
+		};
+		class Item2
+		{
+			position[]={2085.0869,12.754358,5500.8735};
+			name="spawn0";
+			type="Empty";
+		};
+		class Item3
+		{
+			position[]={1355.4587,13.228598,315.10571};
+			name="spawn1";
+			type="Empty";
+		};
+		class Item4
+		{
+			position[]={4549.9399,2.847357,912.68982};
+			name="spawn2";
+			type="Empty";
+		};
+		class Item5
+		{
+			position[]={8880.2793,4.9778252,1703.156};
+			name="spawn3";
+			type="Empty";
+		};
+		class Item6
+		{
+			position[]={579.80536,15.394942,5547.1782};
+			name="spawn4";
+			type="Empty";
+		};
+		class Item7
+		{
+			position[]={3249.5935,6.3452759,2555.6763};
+			name="spawn5";
+			type="Empty";
+		};
+		class Item8
+		{
+			position[]={6143.4604,6.6867952,2753.012};
+			name="spawn6";
+			type="Empty";
+		};
+		class Item9
+		{
+			position[]={1268.5149,14.039586,2857.6775};
+			name="spawn7";
+			type="Empty";
+		};
+		class Item10
+		{
+			position[]={8295.4883,8.9126549,8667.2041};
+			name="spawn8";
+			type="Empty";
+		};
+		class Item11
+		{
+			position[]={9071.9766,14.249757,7322.6162};
+			name="spawn9";
+			type="Empty";
+		};
+		class Item12
+		{
+			position[]={6898.7329,6.2468476,3970.9077};
+			name="spawn10";
+			type="Empty";
+		};
+	};
+};
+
+
+
+class Intro
+{
+	addOns[]=
+	{
+		"ibr_lingor"
+	};
+	addOnsAuto[]=
+	{
+		"ibr_lingor"
+	};
+	randomSeed=6913869;
+	class Intel
+	{
+		startWeather=0.25;
+		forecastWeather=0.25;
+		year=2008;
+		month=10;
+		day=11;
+		hour=9;
+		minute=20;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"ibr_lingor"
+	};
+	addOnsAuto[]=
+	{
+		"ibr_lingor"
+	};
+	randomSeed=4081731;
+	class Intel
+	{
+		startWeather=0.25;
+		forecastWeather=0.25;
+		year=2008;
+		month=10;
+		day=11;
+		hour=9;
+		minute=20;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"ibr_lingor"
+	};
+	addOnsAuto[]=
+	{
+		"ibr_lingor"
+	};
+	randomSeed=4975929;
+	class Intel
+	{
+		startWeather=0.25;
+		forecastWeather=0.25;
+		year=2008;
+		month=10;
+		day=11;
+		hour=9;
+		minute=20;
+	};
+};

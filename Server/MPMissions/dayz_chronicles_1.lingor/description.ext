@@ -1,0 +1,147 @@
+// ====================== Description.ext ===================>
+// Skip briefing screen for SP missions. If no briefing.html is present, it is skipped anyway.
+// Briefing will still be displayed until all clients are connected and done loading.
+briefing					= 0;		// default: 0
+// Defines if the debriefing is shown or not at the end of the mission.
+debriefing					= 0;		// default: 0
+// Define whether you will see the time and date displayed while the intro loads.
+//  - 1: visible
+//  - 0: hidden
+onLoadIntroTime				= 0;		// default: 1
+// Define whether you will see the time and date displayed while the mission loads.
+//  - 1: visible
+//  - 0: hidden
+onLoadMissionTime			= 0;		// default: 1
+// === Header ===============================================>
+class Header {
+	// Class   - Name                - Shortcut
+	// Unknown - Unknown             - Unknown
+	// Coop    - Cooperative Mission - Coop
+	// DM      - Death Match         - DM
+	// Team    - Team Mission        - Team
+	// CTF     - Capture the Flag    - CTF
+	// SCont   - Sector Control      - Scontrol
+	// CTI     - Capture The Island  - CTI
+	// FF      - Flag Fight          - FF
+	// Hold    - Hold Location       - Hold
+	gameType				= DAYZ;		// Game type, see 'class' columns in the table above
+	minPlayers				= 1;		// min # of players the mission supports
+	maxPlayers				= 100;		// max # of players the mission supports
+	playerCountMultipleOf	= 1;		// JIP (???)
+};
+// === Titlecut =============================================>
+// Author of the mission.
+// The default loading screen shows this string below the onLoadName in a smaller font prefixed by "by".
+author						= $STR_MISSION_AUTHOR;
+// String (usually mission name) shown during mission loading.
+// The string is shown in a slightly larger font above the loadScreen.
+// This produces the pictured result.
+// The onLoadMission text is placed below the load screen and the header gameType determines the game time on top of the box. 
+onLoadName					= $STR_MISSION_NAME;
+// Displays a message while the intro is loading.
+onLoadIntro					= $STR_MISSION_LOAD_INTRO;
+// Displays a message while the mission is loading.
+// Note that a mission that takes very little time to load will only display the message for a short time.
+// Care should be taken to see whether your message is readable in that timeframe.
+// The OnLoadMission option is used to present the mission name to the user.
+// In MP this is the name you see when selecting a mission and also the name that is presented to the GameSpy browser.
+onLoadMission				= $STR_MISSION_LOAD_MISSION;
+// You can define a picture to be shown while the mission is loaded.
+// The path is relative to the mission folder.
+loadScreen					= "\z\addons\dayz_code\gui\dayz_logo_ca.paa";
+//cfgLoadingTexts{};
+// === Punktvergabe =========================================>
+minScore					= 0;
+avgScore					= 1800;
+maxScore					= 75000;
+// === Missionszubehör ======================================>
+// Enables/Disables the GPS
+showGPS						= 1;
+// Defines if the compass is visible.
+showCompass					= 1;
+// Defines if the map is shown after the mission starts.
+showMap						= 1;
+// In ArmA, defines if the NotePad is shown after the mission starts.
+showNotePad					= 1;
+// Defines if the NotePad is shown after the mission starts. (Not in ArmA)
+showPad						= 1;
+// Defines if the watch is visible.
+showWatch					= 1;
+// === Respawn ==============================================>
+// Sets respawn type.
+//  - 0 or "NONE" - No respawn
+//  - 1 or "BIRD" - Respawn as a seagull
+//  - 2 or "INSTANT" - Respawn just where you died
+//  - 3 or "BASE" - Respawn in base
+//    Requires a marker named:
+//     - respawn_west
+//     - respawn_east
+//     - respawn_guerrila
+//     - respawn_civilian
+//    Vehicle respawn in base requires a marker named:
+//     - respawn_vehicle_west
+//     - respawn_vehicle_east
+//     - respawn_vehicle_guerrila
+//     - respawn_vehicle_civilian
+// - 4 or "GROUP" - Respawn in your group (if there's no AI left, you'll become a seagull).
+// - 5 or "SIDE" - Respawn into an AI unit on your side (if there's no AI left, you'll become a seagull).
+//                 With this respawn type, team switch is also available to any AI controlled playable units. 
+respawn						= "BASE";
+// Set respawn delay in seconds.
+respawnDelay				= 5;		// default: 42
+// Set vehicle respawn delay in seconds.
+respawnVehicleDelay			= 999;		// default: 11
+// Show the scoreboard and respawn countdown timer for a player if he is killed with respawnType 3.
+respawnDialog				= 1;		// default: 1
+// === Waffen ===============================================>
+// Set weapons available to players during the briefing.
+class weapons {};
+// Allows equipment transferred from one campaign mission to the next to be available during the briefing in the gear menu.
+weaponPool					= 0;
+// === Magazine =============================================>
+class magazines {};
+// === Backpacks ============================================>
+class backpacks {};
+// === Musik ================================================>
+class cfgMusic {};
+// === Sounds ===============================================>
+class cfgSounds {};
+// === Radio ================================================>
+class cfgRadio {};
+// === Umgebung =============================================>
+// === Identitäten ==========================================>
+class cfgIdentities {};
+// === AI ===================================================>
+disabledAI			= 1;
+aiKills				= 1;
+scriptedPlayer		= 1;
+// === Misc =================================================>
+//keys[]				= {};
+//keysLimit[]			= 2;
+//doneKeys[]			= {};
+joinUnassigned		= 0;
+
+//rscTitles
+
+disableChannels[]={0,1,2,6};
+enableItemsDropping=0;
+diagRadio=1;
+diagHit=1;
+
+
+
+// === Params ===============================================>
+class Params {
+	class HeadlessClient {
+		title = "Headless Client";
+		values[] = {0,1};
+		default = 1;
+		texts[] = {"Deactivated","Activated"};
+	};
+	class MainTargets {
+		title = "Main Targets";
+		values[] = {0};
+		default = 0;
+		texts[] = {"All"};
+	};
+};
