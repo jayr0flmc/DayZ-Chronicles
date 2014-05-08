@@ -1,12 +1,10 @@
 version=11;
 class Mission {
 	addOns[] = {
-		"dayz_code",
-		"ibr_lingor"
+		"dzc_core"
 	};
 	addOnsAuto[] = {
-		"dayz_code",
-		"ibr_lingor"
+		"dzc_core"
 	};
 	randomSeed=11171215;
 	class Intel {

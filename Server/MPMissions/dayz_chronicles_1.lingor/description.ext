@@ -24,9 +24,9 @@ class Header {
 	// CTI     - Capture The Island  - CTI
 	// FF      - Flag Fight          - FF
 	// Hold    - Hold Location       - Hold
-	gameType				= DAYZ;		// Game type, see 'class' columns in the table above
+	gameType				= DAYZ CHRONICLES;		// Game type, see 'class' columns in the table above
 	minPlayers				= 1;		// min # of players the mission supports
-	maxPlayers				= 100;		// max # of players the mission supports
+	maxPlayers				= 64;		// max # of players the mission supports
 	playerCountMultipleOf	= 1;		// JIP (???)
 };
 // === Titlecut =============================================>

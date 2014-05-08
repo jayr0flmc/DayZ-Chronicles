@@ -1,5 +1,5 @@
 dir = "@DayZ_Chronicles";
-name = "DayZ Chronicles 1.0.0.0";
+name = "DayZ Chronicles 0.0.1.3";
 actionName = "Website";
-picture = "dayz_logo_ca.paa";
-action = "http://dayz.elbental-productions.de";
+picture = "dzc_logo_ca.paa";
+action = "http://dayz.elbental-productions.de/";
